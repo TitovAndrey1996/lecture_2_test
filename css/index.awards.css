@@ -2,7 +2,7 @@
     background-color: #252527; 
     text-align: center; 
     color: #ffffff; 
-    padding: 90px 24px; 
+    padding: 90px 90px; 
 }
 
 .awards__title {
@@ -98,11 +98,31 @@
     background-image: url("../img/global/about_us_awards_2024.webp");
 }
 
-}
 .awards__name {
+    /* font-size: 22px; */
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
 
+.awards__year {
+    /* font-size: 22px; */
+    font-size: 1.4rem;
+    color: #f1d1af; 
 }
 
 .awards__description {
-
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Два рядки */
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.5;
+    min-height: calc(2 * 1.5em); /* Мінімальна висота для двох рядків */
+    margin-top: 20px;
+    /* font-size: 16px; */
+    font-size: 1rem; 
+    color: rgb(255, 255, 255); 
+    overflow-wrap: break-word; 
+    text-align: center;
 }
