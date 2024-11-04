@@ -102,7 +102,9 @@
 
 .awards__item.hovered::before {
     background-color: rgba(0, 0, 0, 0.7); /* Сильніше затемнення при наведенні */
-    opacity: 0.85;
+    opacity: 0.85; 
+    z-index: 2; /* Підвищує пріоритет, якщо потрібно, для затемнення при наведенні */
+    background-blend-mode: overlay; 
 }
 
 .awards__name, .awards__year, .awards__description {
