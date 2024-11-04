@@ -14,7 +14,8 @@
 }
 
 .awards__main-description {
-    color: rgba(201, 159, 93, 0.85); /* Напівпрозорий колір */
+    color: #ffffff;
+    /* color: rgba(201, 159, 93, 0.85); Напівпрозорий колір */
     /* color: #c99f5d; */ 
     font-size: 2.5rem;
     margin-top: 20px; 
@@ -38,6 +39,7 @@
     /* color: rgb(225,225,225); */
     margin-top: 25px; 
     text-align: center; 
+    font-size: 19px; 
     max-width: 600px; /* Максимальна ширина для зручного читання на великих екранах */
     margin-left: auto; /* Вирівнювання по центру */
     margin-right: auto; /* Вирівнювання по центру */
@@ -66,7 +68,7 @@
     /* padding: 39px 27px; */
      position: relative; 
      background-size: cover;
-     background-position: center;
+     background-position: center; 
      padding: 2rem 1rem; /* Відступи всередині картки */
      border-radius: 8px;
      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
@@ -85,10 +87,22 @@
     top: 0;
     left: 0;
     right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8); /* Напівпрозорий шар для фону */
+    bottom: 0; 
+    background-image: inherit; /* Використовуємо фон як зображення */
+    background-size: inherit;
+    background-position: inherit;
+    filter: grayscale(100%); /* Робимо зображення чорно-білим */ 
+    opacity: 0.7; /* Додаємо напівпрозоре затемнення */ 
+    /* background-color: rgba(0, 0, 0, 0.8); Напівпрозорий шар для фону */
     z-index: 1;
-    border-radius: 8px;
+    border-radius: 8px; 
+    background-color: rgba(0, 0, 0, 0.3); /* Легке затемнення */ 
+    transition: background-color 0.3s, opacity 0.3s; 
+} 
+
+.awards__item.hovered::before {
+    background-color: rgba(0, 0, 0, 0.7); /* Сильніше затемнення при наведенні */
+    opacity: 0.85;
 }
 
 .awards__name, .awards__year, .awards__description {
